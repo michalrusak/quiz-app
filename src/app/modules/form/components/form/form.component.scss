@@ -1,7 +1,6 @@
+@import "_extends";
 .quiz-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend .flex-center;
   height: 100%;
   &__form {
     display: flex;
