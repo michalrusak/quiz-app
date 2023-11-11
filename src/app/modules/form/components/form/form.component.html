@@ -1,0 +1,13 @@
+<div class="quiz-form">
+  <form class="quiz-form__form" [formGroup]="quizForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Count of questions</mat-label>
+      <input class="quiz-form__input" matInput formControlName="count">
+      <mat-error *ngIf="controls.count.invalid">{{getErrorMessage(controls.count)}}</mat-error>
+    </mat-form-field>
+
+    <button class="quiz-form__button" [disabled]="quizForm.invalid" type="submit" mat-raised-button
+      color="primary">Start quiz</button>
+  </form>
+
+</div>
