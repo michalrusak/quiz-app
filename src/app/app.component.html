@@ -1,11 +1,11 @@
 <header class="header">
   <app-header></app-header>
 </header>
-<main class="container">
-  <ng-container>
+<main [ngSwitch]="view" class="container">
+  <ng-container *ngSwitchCase="ViewEnum.form">
     <app-form></app-form>
   </ng-container>
-  <ng-container>
+  <ng-container *ngSwitchCase="ViewEnum.quiz">
     <app-question></app-question>
   </ng-container>
 </main>

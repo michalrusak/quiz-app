@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import * as QuizActions from '../../../quiz/store/quiz.actions';
+import { AppState } from 'src/app/store/app.reducers';
+import { Store } from '@ngrx/store';
+import { count } from 'rxjs';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss'],
 })
-export class FormComponent {
+export class FormComponent implements OnInit {
   quizForm = new FormGroup({
     count: new FormControl(1, {
       validators: [
@@ -18,6 +22,10 @@ export class FormComponent {
       nonNullable: true,
     }),
   });
+
+  constructor(private store: Store<AppState>) {}
+
+  ngOnInit(): void {}
 
   get controls() {
     return this.quizForm.controls;
@@ -40,5 +48,9 @@ export class FormComponent {
     return '';
   }
 
-  onSubmit() {}
+  onSubmit() {
+    this.store.dispatch(
+      QuizActions.FetchQuiz({ amount: this.quizForm.getRawValue().count })
+    );
+  }
 }
