@@ -1,1 +1,12 @@
-<p>question works!</p>
+<div class="question">
+  <div class="question__question-content">{{question}}</div>
+  <div class="question__answers">
+    <button mat-raised-button *ngFor="let answer of answers" (click)="selectAnswer(answer)"
+      class="question__button-answer {{answer === selectedAnswer ? 'question__button-answer--active' : ''}} ">{{answer}}</button>
+  </div>
+  <div class="question__button-container">
+    <button class="question__next-buuton" mat-raised-button color="primary" [disabled]="!selectedAnswer"
+      (click)="nextQuestion()">{{isLastQuestion ? "Finish quiz" : 'Next question'}}</button>
+  </div>
+
+</div>

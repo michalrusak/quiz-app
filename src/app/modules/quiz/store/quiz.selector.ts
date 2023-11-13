@@ -12,3 +12,27 @@ export const selectView = createSelector(
   selectQuiz,
   (state: QuizState) => state.view
 );
+export const selectQuestion = createSelector(
+  selectQuiz,
+  (state: QuizState) => state.questions[state.index].question
+);
+export const selectAllAnswers = createSelector(
+  selectQuiz,
+  (state: QuizState) => state.questions[state.index].answers
+);
+export const selectCurrentIndex = createSelector(
+  selectQuiz,
+  (state: QuizState) => state.index
+);
+export const selectPoints = createSelector(
+  selectQuiz,
+  (state: QuizState) => state.points
+);
+export const selectError = createSelector(
+  selectQuiz,
+  (state: QuizState) => state.fetchQuestionsErrorMessage
+);
+export const selectIsLastQuestion = createSelector(
+  selectQuiz,
+  (state: QuizState) => state.isLastQuestion
+);

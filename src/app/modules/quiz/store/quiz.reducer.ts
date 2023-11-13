@@ -11,6 +11,7 @@ export interface QuizState {
   fetchQuestionsErrorMessage: string | null;
   loading: boolean;
   view: string;
+  isLastQuestion: boolean;
 }
 
 const initialStore: QuizState = {
@@ -21,6 +22,7 @@ const initialStore: QuizState = {
   fetchQuestionsErrorMessage: null,
   loading: false,
   view: ViewEnum.form,
+  isLastQuestion: false,
 };
 
 const _quizReducer = createReducer(
@@ -41,6 +43,20 @@ const _quizReducer = createReducer(
     fetchQuestionsErrorMessage: null,
     amount: action.questions.length,
     view: ViewEnum.quiz,
+  })),
+  on(QuizActions.AddAnswer, (state, action) => ({
+    ...state,
+    questions: state.questions.map((q, index) =>
+      index === state.index ? { ...q, user_answer: action.answer } : q
+    ),
+    points:
+      state.questions[state.index].correct_answer === action.answer
+        ? state.points + 1
+        : state.points,
+    index: state.index + 1,
+    view: state.index + 1 === state.amount ? ViewEnum.quizResult : state.view,
+    isLastQuestion:
+      state.index + 2 === state.amount ? true : state.isLastQuestion,
   }))
 );
 

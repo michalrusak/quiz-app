@@ -5,6 +5,7 @@ enum CounterActionType {
   fetch = '[Quiz] fetch questions',
   fetchSuccess = '[Quiz] fetch questions success',
   fetchFalied = '[Quiz] fetch questions failed',
+  addAnswer = '[Quiz] add answer',
 }
 
 export const FetchQuiz = createAction(
@@ -20,4 +21,9 @@ export const FetchQuizSuccess = createAction(
 export const FetchQuizFailed = createAction(
   CounterActionType.fetchFalied,
   props<{ errorMessage: string }>()
+);
+
+export const AddAnswer = createAction(
+  CounterActionType.addAnswer,
+  props<{ answer: string }>()
 );

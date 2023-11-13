@@ -3,7 +3,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import * as QuizActions from '../../../quiz/store/quiz.actions';
 import { AppState } from 'src/app/store/app.reducers';
 import { Store } from '@ngrx/store';
-import { count } from 'rxjs';
 
 @Component({
   selector: 'app-form',
