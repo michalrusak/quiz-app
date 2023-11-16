@@ -1,0 +1,13 @@
+@import "extends";
+@import "variables";
+
+.summary-list {
+  @extend .flex-center;
+  flex-direction: column;
+
+  &__result {
+    font-size: 2rem;
+    line-height: 120%;
+    text-align: center;
+  }
+}

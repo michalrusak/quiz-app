@@ -12,6 +12,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { quizReducer } from './modules/quiz/store/quiz.reducer';
 import { QuizEffects } from './modules/quiz/store/quiz.effects';
 import { HttpClientModule } from '@angular/common/http';
+import { SummaryModule } from './modules/summary/summary.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     CoreModule,
     QuizModule,
     FormModule,
+    SummaryModule,
     HttpClientModule,
     BrowserAnimationsModule,
     StoreModule.forRoot({ state: quizReducer }),

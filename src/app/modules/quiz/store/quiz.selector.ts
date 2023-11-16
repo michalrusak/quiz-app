@@ -36,3 +36,7 @@ export const selectIsLastQuestion = createSelector(
   selectQuiz,
   (state: QuizState) => state.isLastQuestion
 );
+export const selectAllQuestions = createSelector(
+  selectQuiz,
+  (state: QuizState) => state.questions
+);

@@ -43,6 +43,7 @@ const _quizReducer = createReducer(
     fetchQuestionsErrorMessage: null,
     amount: action.questions.length,
     view: ViewEnum.quiz,
+    isLastQuestion: action.questions.length === 1 ? true : state.isLastQuestion,
   })),
   on(QuizActions.AddAnswer, (state, action) => ({
     ...state,

@@ -1,0 +1,11 @@
+<div class="summary-element">
+  <div class="summary-element__question">
+    {{index+1}}{{'.'}}{{question.question}}
+  </div>
+  <div class="summary-element__answers">
+    <mat-card *ngFor="let answer of question.answers;"
+      class="summary-element__answer {{question.correct_answer === answer && answer === question.user_answer ? 'summary-element__answer--green' : question.correct_answer !== answer && answer === question.user_answer ? 'summary-element__answer--red' : question.correct_answer === answer && answer !== question.user_answer ? 'summary-element__answer--green' :'' }} ">
+      <mat-card-content>{{answer}}</mat-card-content>
+    </mat-card>
+  </div>
+</div>

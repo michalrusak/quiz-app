@@ -1,0 +1,47 @@
+@import "extends";
+@import "variables";
+
+.summary-element {
+  @extend .flex-center;
+  flex-direction: column;
+  margin: 50px;
+  overflow: hidden;
+  &__question {
+    font-size: 2rem;
+    line-height: 120%;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  &__answers {
+    width: 500px;
+    text-align: center;
+    margin: 30px;
+  }
+  &__answer {
+    color: $color-font-white;
+    margin: 10px;
+    font-size: 1.5rem;
+    &--green {
+      color: $color--correct;
+    }
+    &--red {
+      color: $color--incorrect;
+    }
+  }
+}
+
+@media (max-width: map-get($grid-breakpoints, md)) {
+  .summary-element {
+    &__answers {
+      max-width: 350px;
+    }
+  }
+}
+@media (max-width: map-get($grid-breakpoints, sm)) {
+  .summary-element {
+    &__answers {
+      max-width: 250px;
+    }
+  }
+}
