@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { Question } from 'src/app/modules/core/models/question.model';
@@ -15,7 +15,7 @@ import * as QuizActions from '../../../quiz/store/quiz.actions';
   templateUrl: './summary-list.component.html',
   styleUrls: ['./summary-list.component.scss'],
 })
-export class SummaryListComponent implements OnInit {
+export class SummaryListComponent implements OnInit, OnDestroy {
   questions!: Question[];
   points!: number;
   amount!: number;
@@ -43,5 +43,9 @@ export class SummaryListComponent implements OnInit {
 
   restartQuiz(): void {
     this.store.dispatch(QuizActions.RestartQuiz());
+  }
+
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
   }
 }

@@ -9,7 +9,7 @@ import { Store } from '@ngrx/store';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss'],
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
   quizForm = new FormGroup({
     count: new FormControl(1, {
       validators: [
@@ -23,8 +23,6 @@ export class FormComponent implements OnInit {
   });
 
   constructor(private store: Store<AppState>) {}
-
-  ngOnInit(): void {}
 
   get controls() {
     return this.quizForm.controls;

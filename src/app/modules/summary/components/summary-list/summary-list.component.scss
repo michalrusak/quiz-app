@@ -4,7 +4,7 @@
 .summary-list {
   @extend .flex-center;
   flex-direction: column;
-
+  overflow: hidden;
   &__result {
     font-size: 2rem;
     line-height: 120%;

@@ -2,11 +2,11 @@ import { createAction, props } from '@ngrx/store';
 import { Question } from '../../core/models/question.model';
 
 enum CounterActionType {
-  fetch = '[Quiz] fetch questions',
-  fetchSuccess = '[Quiz] fetch questions success',
-  fetchFalied = '[Quiz] fetch questions failed',
-  addAnswer = '[Quiz] add answer',
-  restartQuiz = '[Quiz] restart quiz',
+  fetch = '[Quiz] Fetch Questions',
+  fetchSuccess = '[Quiz] Fetch Questions Success',
+  fetchFalied = '[Quiz] Fetch Questions Failed',
+  addAnswer = '[Quiz] Add Answer',
+  restartQuiz = '[Quiz] Restart Quiz',
 }
 
 export const FetchQuiz = createAction(

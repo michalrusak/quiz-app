@@ -2,6 +2,7 @@
 .quiz-form {
   @extend .flex-center;
   height: 100%;
+  overflow: hidden;
   &__form {
     display: flex;
     flex-direction: column;

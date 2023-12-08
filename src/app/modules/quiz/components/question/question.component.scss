@@ -4,6 +4,7 @@
   @extend .flex-center;
   flex-direction: column;
   height: 100vh;
+  overflow: hidden;
   gap: 30px;
   &__question-content {
     font-size: 2rem;
@@ -24,11 +25,6 @@
       border: 2px solid $color-active;
     }
   }
-
-  //   &__button-container {
-  //   }
-  //   &__next-button {
-  //   }
 }
 
 @media (max-width: map-get($grid-breakpoints, md)) {
