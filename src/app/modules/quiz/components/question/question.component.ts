@@ -6,8 +6,10 @@ import { AppState } from 'src/app/store/app.reducers';
 import * as QuizActions from '../../../quiz/store/quiz.actions';
 import {
   selectAllAnswers,
+  selectCurrentIndex,
   selectIsLastQuestion,
   selectQuestion,
+  selectQuizAmount,
 } from '../../store/quiz.selector';
 
 @Component({
@@ -21,6 +23,8 @@ export class QuestionComponent implements OnInit, OnDestroy {
   sub = new Subscription();
   selectedAnswer!: string;
   isLastQuestion = false;
+  index!: number;
+  amountQuestion!: number;
   constructor(private store: Store<AppState>) {}
 
   nextQuestion() {
@@ -45,6 +49,22 @@ export class QuestionComponent implements OnInit, OnDestroy {
     this.sub.add(
       this.store.select(selectAllAnswers).subscribe({
         next: (value) => (this.answers = value),
+      })
+    );
+
+    this.sub.add(
+      this.store.select(selectQuizAmount).subscribe({
+        next: (value) => {
+          this.amountQuestion = value;
+        },
+      })
+    );
+
+    this.sub.add(
+      this.store.select(selectCurrentIndex).subscribe({
+        next: (value) => {
+          this.index = value + 1;
+        },
       })
     );
 

@@ -3,9 +3,19 @@
 .question {
   @extend .flex-center;
   flex-direction: column;
+  position: relative;
   height: 100vh;
   overflow: hidden;
   gap: 30px;
+
+  &__index {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
   &__question-content {
     font-size: 2rem;
     line-height: 110%;

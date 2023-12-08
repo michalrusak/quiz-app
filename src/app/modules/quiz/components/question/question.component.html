@@ -1,4 +1,5 @@
 <div class="question">
+  <div class="question__index">{{index}}/{{amountQuestion}}</div>
   <div class="question__question-content">{{question}}</div>
   <div class="question__answers">
     <button mat-raised-button *ngFor="let answer of answers" (click)="selectAnswer(answer)"
