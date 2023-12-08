@@ -6,6 +6,7 @@ enum CounterActionType {
   fetchSuccess = '[Quiz] fetch questions success',
   fetchFalied = '[Quiz] fetch questions failed',
   addAnswer = '[Quiz] add answer',
+  restartQuiz = '[Quiz] restart quiz',
 }
 
 export const FetchQuiz = createAction(
@@ -27,3 +28,5 @@ export const AddAnswer = createAction(
   CounterActionType.addAnswer,
   props<{ answer: string }>()
 );
+
+export const RestartQuiz = createAction(CounterActionType.restartQuiz);

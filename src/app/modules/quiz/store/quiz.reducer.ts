@@ -58,6 +58,17 @@ const _quizReducer = createReducer(
     view: state.index + 1 === state.amount ? ViewEnum.quizResult : state.view,
     isLastQuestion:
       state.index + 2 === state.amount ? true : state.isLastQuestion,
+  })),
+  on(QuizActions.RestartQuiz, (state, action) => ({
+    ...state,
+    amount: 0,
+    index: 0,
+    points: 0,
+    questions: [],
+    fetchQuestionsErrorMessage: null,
+    loading: false,
+    view: ViewEnum.form,
+    isLastQuestion: false,
   }))
 );
 

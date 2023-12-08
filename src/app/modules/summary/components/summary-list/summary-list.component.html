@@ -2,4 +2,6 @@
   <h2 class="summary-list__result">Your result: {{points/amount | percent}}</h2>
   <app-summary *ngFor="let question of questions; let i = index" [question]="question" [index]="i">
   </app-summary>
+
+  <button class="summary-list__button" (click)="restartQuiz()" mat-raised-button color="primary">Restart quiz</button>
 </div>
