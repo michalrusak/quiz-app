@@ -3,8 +3,8 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 
 import * as QuizActions from './quiz.actions';
 import { catchError, map, of, switchMap } from 'rxjs';
-import { QuizApiService } from '../../core/services/quiz-api.service';
-import { QuestionResults } from '../../core/models/question.model';
+import { QuizApiService } from '../modules/core/services/quiz-api.service';
+import { QuestionResults } from '../modules/core/models/question.model';
 
 @Injectable()
 export class QuizEffects {

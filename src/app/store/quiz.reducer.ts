@@ -1,7 +1,7 @@
 import { createReducer, on, Action } from '@ngrx/store';
 import * as QuizActions from './quiz.actions';
 import { ViewEnum } from 'src/enums/view.enum';
-import { Question } from '../../core/models/question.model';
+import { Question } from '../modules/core/models/question.model';
 
 export interface QuizState {
   amount: number;

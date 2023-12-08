@@ -6,9 +6,9 @@ import {
   selectAllQuestions,
   selectPoints,
   selectQuizAmount,
-} from 'src/app/modules/quiz/store/quiz.selector';
+} from 'src/app/store/quiz.selector';
 import { AppState } from 'src/app/store/app.reducers';
-import * as QuizActions from '../../../quiz/store/quiz.actions';
+import * as QuizActions from '../../../../store/quiz.actions';
 
 @Component({
   selector: 'app-summary-list',

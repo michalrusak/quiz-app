@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import * as QuizActions from '../../../quiz/store/quiz.actions';
+import * as QuizActions from '../../../../store/quiz.actions';
 import { AppState } from 'src/app/store/app.reducers';
 import { Store } from '@ngrx/store';
 

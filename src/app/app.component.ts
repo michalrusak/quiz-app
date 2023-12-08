@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { AppState } from './store/app.reducers';
-import { selectView } from './modules/quiz/store/quiz.selector';
+import { selectView } from './store/quiz.selector';
 import { ViewEnum } from 'src/enums/view.enum';
 
 @Component({

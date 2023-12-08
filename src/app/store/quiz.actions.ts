@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Question } from '../../core/models/question.model';
+import { Question } from '../modules/core/models/question.model';
 
 enum CounterActionType {
   fetch = '[Quiz] Fetch Questions',

@@ -9,8 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
-import { quizReducer } from './modules/quiz/store/quiz.reducer';
-import { QuizEffects } from './modules/quiz/store/quiz.effects';
+import { quizReducer } from './store/quiz.reducer';
+import { QuizEffects } from './store/quiz.effects';
 import { HttpClientModule } from '@angular/common/http';
 import { SummaryModule } from './modules/summary/summary.module';
 

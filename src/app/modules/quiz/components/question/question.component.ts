@@ -3,14 +3,14 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { AppState } from 'src/app/store/app.reducers';
-import * as QuizActions from '../../../quiz/store/quiz.actions';
+import * as QuizActions from '../../../../store/quiz.actions';
 import {
   selectAllAnswers,
   selectCurrentIndex,
   selectIsLastQuestion,
   selectQuestion,
   selectQuizAmount,
-} from '../../store/quiz.selector';
+} from '../../../../store/quiz.selector';
 
 @Component({
   selector: 'app-question',

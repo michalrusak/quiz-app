@@ -1,4 +1,4 @@
-import { QuizState } from '../modules/quiz/store/quiz.reducer';
+import { QuizState } from './quiz.reducer';
 
 export interface AppState {
   state: QuizState;
