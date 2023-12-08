@@ -1,27 +1,65 @@
 # QuizApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
+This project was generated with Angular CLI version 16.1.3.\
+This is a quiz app from [OpenDB](https://opentdb.com/) api.
 
-## Development server
+# Show Preview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+You can test the application without installing it:
+[Click Here](https://quiz-app-qxgq.onrender.com/).
 
-## Code scaffolding
+# Technologies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular
+- TypeScript
+- RXJS
+- NGRX Store
+- Angular Material
+- SCSS
 
-## Build
+# ScreenShots
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![Preview Screenshoot1](/screenshots/form.png)
+![Preview Screenshoot2](/screenshots/question1.png)
+![Preview Screenshoot3](/screenshots/question2.png)
+![Preview Screenshoot4](/screenshots/result.png)
+![Preview Screenshoot5](/screenshots/ngrx_store.png)
+![Preview Screenshoot6](/screenshots/mobile.png)
 
-## Running unit tests
+# Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Node.js installed on your computer
 
-## Running end-to-end tests
+# Instalation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 1. Clone the workout-app repository from GitHub to your local machine.
 
-## Further help
+```
+git clone https://github.com/michalrusak/quiz-app.git
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### 2. Change directory to the cloned project
+
+```
+cd quiz-app
+```
+
+### 3. Install dependencies using npm or yarn
+
+```
+npm install
+```
+
+or
+
+```
+yarn install
+```
+
+### 4. Run local server
+
+```
+npm start
+```
+
+And navigate to `http://localhost:4200/`
